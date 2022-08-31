@@ -1,9 +1,21 @@
-ul li {
-    padding-left: 20px;
-    padding-bottom: 20px;
-
+.contenedor-menu {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.logoazul {
-    padding: 10px;
+ul li {
+    padding-right: 35px;    
+    padding-left: 35px;
+    display: flex;
+    align-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+.logoAzul {
+    padding: 15px;
+    height: 140px;
+    width: auto;
 }
