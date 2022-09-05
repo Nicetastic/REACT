@@ -1,10 +1,11 @@
 import React from 'react'
+import Titulo from '../Titulo/Titulo'
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = () => {
   return (
-      <div className="container-xxl">
-        <h1>{greeting}</h1>
-      </div>
+    <div>
+      <Titulo greeting= "Saludo"/>
+    </div>
   )
 }
 
