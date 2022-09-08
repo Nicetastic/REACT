@@ -1,6 +1,6 @@
 .counter {
     width: fit-content;
-    background-color: blueviolet;
+    background-color: lightskyblue;
     margin: auto;
     padding: 1rem;
     text-align: center;
@@ -8,4 +8,8 @@
 
 span {
     margin: 1rem;
+}
+
+.btn {
+    margin: 0.5em;
 }
