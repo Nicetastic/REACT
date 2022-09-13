@@ -1,14 +1,38 @@
-.container {
-    width: 100%;
+.ContainerItemDetail {
+    width: 98%;
     margin: auto;
 }
 
+@media screen and (min-width:768px) {
+    .ContainerItemDetail {
+        width: 70%;
+    }
+}
+
 .detail {
-    margin: 3rem;
-    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 50%;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
 }
 
 .detail__image {
     width: 100%;
+}
+
+.content {
+    width: 100%;
+}
+
+@media screen and (min-width:768px) {
+    .detail__image {
+        width: 50%;
+    }
+
+    .content {
+        padding-left: 3rem;
+        width: 50%;
+    }
 }

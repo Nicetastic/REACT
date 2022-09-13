@@ -16,10 +16,10 @@ const ItemListContainer = ({texto}) => {
   useEffect(() => {
     const getData = new Promise(resolve => {
       setTimeout(() => {
-        resolve(productos);
-      }, 2000);
-    });
-    getData.then(res => setData(res));
+        resolve(productos)
+      }, 2000)
+    })
+    getData.then(res => setData(res))
   }, [])
 
   const onAdd = (cantidad) => {

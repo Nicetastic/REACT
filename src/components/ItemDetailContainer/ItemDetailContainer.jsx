@@ -1,23 +1,29 @@
 import React, {useEffect, useState} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
 
-const productos = {id: 1, image: "../assets/img/cortadora.png", title: "Cortadora de fiambre", precio: "$70000"}
+const productos = {
+  id: 1,
+  image: "../assets/img/cortadora.png",
+  title: "Cortadora de fiambre",
+  price: "$70000",
+  desc: "Construcción en aluminio anodizado Afilador incorporado con protector Cuchilla de acero inoxidable Funcionamiento por gravedad con plano a 45 Patas de goma anti deslizantes",
+};
 
 const ItemDetailContainer = () => {
-  const [data, setData] = useState ({})
+  const [item, setItem] = useState ({}) 
 
   useEffect (() => { 
-    const getData = new Promise (resolve => {
+    const getItem = new Promise (resolve => {
       setTimeout (() => {
-        resolve(productos)
-      }, 3000)
+        resolve(productos);
+      }, 2000)
     })
 
-    getData.then(res => setData(res))
+    getItem.then(res => setItem(res))
   },[])
   
   return (
-    <ItemDetail data={data} />
+    <ItemDetail item={item} />
   )
 }
 
