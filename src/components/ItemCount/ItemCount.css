@@ -1,8 +1,5 @@
 .counter {
-    width: fit-content;
-    background-color: lightskyblue;
-    margin: auto;
-    padding: 1rem;
+    width: auto;
     text-align: center;
 }
 
@@ -11,5 +8,6 @@ span {
 }
 
 .btn {
+    width: max-content;
     margin: 0.5em;
 }
