@@ -3,7 +3,7 @@ import "./Item.css"
 
 const Item = ({info}) => {
   return (
-    <div className= "card Producto container-xxl col">
+    <div className= "card Producto container-xxl">
       <img src= {info.image} alt=""/>
       <div className="card-body">
         <h2 className="card-title">{info.title}</h2>

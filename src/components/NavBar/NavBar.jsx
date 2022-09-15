@@ -2,6 +2,7 @@ import React from 'react'
 import Logo from "../../assets/img/logoazulsys.png"
 import CartWidget from "../Cartwidget/Cartwidget"
 import "./NavBar.css"
+import { NavLink } from 'react-router-dom'
 
 const NavBar = () => {
   return (
@@ -9,19 +10,19 @@ const NavBar = () => {
       <img src={Logo} alt="logo" className='logoAzul'/>
       <ul className="nav">
         <li className="nav-item">
-          <a className="nav-link" href=".">Inicio</a>
+          <NavLink className="nav-link" to="/">Inicio</NavLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href=".">Productos</a>
+          <NavLink className="nav-link" to="/category/:id">Productos</NavLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href=".">Nosotros</a>
+          <NavLink className="nav-link" to="/category/:id">Nosotros</NavLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href=".">Contacto</a>
+          <NavLink className="nav-link" to="/item/:id">Contacto</NavLink>
         </li>
         <li>
-          <a className="carrito" href="."><CartWidget /></a>
+          <NavLink className="carrito" to="/"><CartWidget /></NavLink>
         </li>
       </ul>
     </div>
