@@ -1,48 +1,27 @@
 import React, {useEffect, useState} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
-import { getItemById } from '../customFetch'
-// import ItemCount from '../ItemCount/ItemCount'
+import Productos from './ProductosDetallado'
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState ({}) 
     const {id} = useParams()
 
     useEffect(()=> {
-      getItemById(id).then(response => {
-          setItem(response)
-      })
-  }, [id])
+    const getItem = new Promise(resolve => {
+      setTimeout(() => {
+        resolve(Productos)
+      }, 2000)
+    })
 
-  // const onAdd = (cantidad) => {
-  //   console.log(`Agregaste ${cantidad} unidades`)
-  // }
+    getItem.then(res => setItem(res.find(Producto => Producto.id === parseInt(id))))
+  }, [id])
 
   return (
   <div className='containerDetail'>
       <ItemDetail item={item}/>
-      {/* <ItemCount initial={1} stock={7} onAdd={onAdd} /> */}
   </div>
   )
 }
-
-  // useEffect (() => { 
-  //   const getItem = new Promise (resolve => {
-  //     setTimeout (() => {
-  //       resolve(productos);
-  //     }, 2000)
-  //   })
-
-  //   getItem.then(res => setItem(res))
-  // },[])
-  
-  // return (
-  //   <div className='containerDetail'>
-  //       <ItemDetail item={item}/>
-  //       {/* <ItemCount initial={1} stock={7} onAdd={onAdd} /> */}
-  //   </div>
-  //   )}
-    
-  
 
 export default ItemDetailContainer
