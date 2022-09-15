@@ -24,7 +24,7 @@ const ItemListContainer = ({texto}) => {
     })
 
     if (id) {
-      getData.then(res => setData(res.filter(Hogar => Hogar.category === id)))
+      getData.then(res => setData(res.filter(productos => productos.category === id)))
     } else {
       getData.then(res => setData(res))
     }
