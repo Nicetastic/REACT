@@ -12,21 +12,20 @@ const productos = [
 ]
 
 const ItemListContainer = ({texto}) => {
-  const [data, setData] = useState ([])
-
+  const [item,setItem] = useState ([])
   const {id} = useParams ()
 
   useEffect(() => {
-    const getData = new Promise(resolve => {
+    const getItem = new Promise(resolve => {
       setTimeout(() => {
         resolve(productos)
       }, 2000)
     })
 
     if (id) {
-      getData.then(res => setData(res.filter(productos => productos.category === id)))
+      getItem.then(res => setItem(res.filter(productos => productos.category === id)))
     } else {
-      getData.then(res => setData(res))
+      getItem.then(res => setItem(res))
     }
   }, [id])
 
@@ -34,7 +33,7 @@ const ItemListContainer = ({texto}) => {
     <div className='container-xxl'>
       <div className=' row'>
       {/* <Titulo greeting={texto} /> */}
-      <ItemList data={data} />
+      <ItemList item={item} />
       </div>
     </div>
   )
