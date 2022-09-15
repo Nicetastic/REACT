@@ -12,9 +12,9 @@ const productos = [
 ]
 
 const ItemListContainer = ({texto}) => {
-  const [data, setData] = useState ([]);
+  const [data, setData] = useState ([])
 
-  const {id} = useParams ();
+  const {id} = useParams ()
 
   useEffect(() => {
     const getData = new Promise(resolve => {
