@@ -1,4 +1,4 @@
-import Productos from "./ProductosListado"
+import Productos from "./ProductosDetallado"
 
 export const customFetch = () => {
     return new Promise ((resolve) => {
