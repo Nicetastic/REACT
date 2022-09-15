@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import "./ItemListContainer.css"
-// import Titulo from '../Titulo/Titulo'
-import ItemList from '../ItemList/ItemList'
 import {useParams} from 'react-router-dom'
+import ItemList from '../ItemList/ItemList'
+// import Titulo from '../Titulo/Titulo'
 
 const productos = [
   {id: 1, image: "../assets/img/cortadora.png", title: "Cortadora de fiambre", category: "Comercio", precio: "$70000"},
@@ -12,9 +12,9 @@ const productos = [
 ]
 
 const ItemListContainer = ({texto}) => {
-  const [data, setData] = useState ([]);
+  const [data, setData] = useState ([])
 
-  const {id} = useParams ();
+  const {id} = useParams ()
 
   useEffect(() => {
     const getData = new Promise(resolve => {
