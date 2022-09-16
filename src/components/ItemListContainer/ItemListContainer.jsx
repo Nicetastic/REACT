@@ -5,10 +5,10 @@ import ItemList from '../ItemList/ItemList'
 // import Titulo from '../Titulo/Titulo'
 
 const productos = [
-  {id: "1", image: "../assets/img/cortadora.png", title: "Cortadora de fiambre", category: "Comercio", precio: "$70000"},
-  {id: "2", image: "../assets/img/escala.png", title: "Balanza de precisión", category: "Comercio", precio: "$30000"},
-  {id: "3", image: "../assets/img/aacc.png", title: "Aire Acondicionado", category: "Hogar", precio: "$50000"},
-  {id: "4", image: "../assets/img/tvled.png", title: "Televisión LED", category: "Hogar", precio: "$55000"},
+  {id: 1, image: "../assets/img/cortadora.png", title: "Cortadora de fiambre", category: "Comercio", precio: "$70000"},
+  {id: 2, image: "../assets/img/escala.png", title: "Balanza de precisión", category: "Comercio", precio: "$30000"},
+  {id: 3, image: "../assets/img/aacc.png", title: "Aire Acondicionado", category: "Hogar", precio: "$50000"},
+  {id: 4, image: "../assets/img/tvled.png", title: "Televisión LED", category: "Hogar", precio: "$55000"},
 ]
 
 const ItemListContainer = ({texto}) => {
