@@ -7,19 +7,16 @@ import { NavLink } from 'react-router-dom'
 const NavBar = () => {
   return (
     <div className='contenedor-menu container-xxl'>
-      <img src={Logo} alt="logo" className='logoAzul'/>
+      <NavLink className="carrito" to="/"><img src={Logo} alt="logo" className='logoAzul'/></NavLink>
       <ul className="nav">
         <li className="nav-item">
           <NavLink className="nav-link" to="/">Inicio</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" to="/category/:id">Hogar</NavLink>
+          <NavLink className="nav-link" to="/category/Hogar">Hogar</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" to="/category/:id">Comercio</NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" to="/item/:id">Contacto</NavLink>
+          <NavLink className="nav-link" to="/category/Comercio">Comercio</NavLink>
         </li>
         <li>
           <NavLink className="carrito" to="/"><CartWidget /></NavLink>
