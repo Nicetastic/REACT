@@ -3,14 +3,12 @@
     width: 25%;
     flex-direction: column;
     align-items: center;
-    flex-wrap: nowrap;
     text-align: center;
-    padding-bottom: 5px;
 }
 
 .Producto img {
-    margin-top: 5px;
-    width: 50%;
-    height: 50%;
-    object-fit: fill;
+    margin-top: 20px;
+    width: 45%;
+    height: 45%;
+    object-fit: cover;
 }

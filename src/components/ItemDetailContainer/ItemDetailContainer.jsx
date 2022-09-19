@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
-import Productos from './ProductosDetallado'
+import Productos from '../Productos'
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState ({}) 
@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
     const getItem = new Promise(resolve => {
       setTimeout(() => {
         resolve(Productos)
-      }, 2000)
+      }, 1000)
     })
 
     getItem.then(res => setItem(res.find(Producto => Producto.id === parseInt(id))))
@@ -19,7 +19,7 @@ const ItemDetailContainer = () => {
 
   return (
   <div className='containerDetail'>
-      <ItemDetail item={item}/>
+      {item ? <ItemDetail item={item}/> : <h1>Cargando...</h1>}
   </div>
   )
 }

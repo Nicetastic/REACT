@@ -2,14 +2,7 @@ import React, {useEffect, useState} from 'react'
 import "./ItemListContainer.css"
 import {useParams} from 'react-router-dom'
 import ItemList from '../ItemList/ItemList'
-// import Titulo from '../Titulo/Titulo'
-
-const productos = [
-  {id: 1, image: "../assets/img/cortadora.png", title: "Cortadora de fiambre", category: "Comercio", precio: "$70000"},
-  {id: 2, image: "../assets/img/escala.png", title: "Balanza de precisión", category: "Comercio", precio: "$30000"},
-  {id: 3, image: "../assets/img/aacc.png", title: "Aire Acondicionado", category: "Hogar", precio: "$50000"},
-  {id: 4, image: "../assets/img/tvled.png", title: "Televisión LED", category: "Hogar", precio: "$55000"},
-]
+import Productos from '../Productos'
 
 const ItemListContainer = ({texto}) => {
   const [item,setItem] = useState ([])
@@ -18,7 +11,7 @@ const ItemListContainer = ({texto}) => {
   useEffect(() => {
     const getItem = new Promise(resolve => {
       setTimeout(() => {
-        resolve(productos)
+        resolve(Productos)
       }, 2000)
     })
 
@@ -30,9 +23,8 @@ const ItemListContainer = ({texto}) => {
   }, [id])
 
   return (
-    <div className='container-xxl'>
+    <div className='container-xxl mt-4 pl-3'>
       <div className=' row'>
-      {/* <Titulo greeting={texto} /> */}
       <ItemList item={item} />
       </div>
     </div>
