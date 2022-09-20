@@ -8,9 +8,9 @@ const ItemDetail = ({item}) => {
   const [carrito, setCarrito] = useState(false)
   const { addProduct } = useCartContext();
 
-  const onAdd = (cantidad) => {
+  const onAdd = (quantity) => {
     setCarrito(true)
-    addProduct(item, cantidad);
+    addProduct(item, quantity);
   }
 
   return (
@@ -23,7 +23,7 @@ const ItemDetail = ({item}) => {
                 <p>{item.desc}</p>
                 {carrito 
                     ? (<Link to="/cart"><h5>Terminar mi compra</h5></Link>)
-                    : (<ItemCount initial={1} stock={7} onAdd={onAdd} />)
+                    : (<ItemCount initial={1} stock={item.stock} onAdd={onAdd} />)
                 }
             </div>
         </div>
