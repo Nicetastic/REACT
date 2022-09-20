@@ -1,5 +1,5 @@
 @media screen and (min-width:768px) {
-    .ContainerItemDetail {
+    .ItemDetail {
         width: 70%;
     }
 }
@@ -10,8 +10,9 @@
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    padding-left: 13px;
-    padding-right: 13px;
+    padding: 13px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .detail__image {
@@ -21,6 +22,10 @@
 
 .content {
     width: 100%;
+}
+
+h5{
+    color: black;
 }
 
 @media screen and (min-width:768px) {

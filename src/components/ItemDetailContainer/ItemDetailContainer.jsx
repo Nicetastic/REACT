@@ -19,7 +19,7 @@ const ItemDetailContainer = () => {
 
   return (
   <div className='containerDetail'>
-      {item ? <ItemDetail item={item}/> : <h1>Cargando...</h1>}
+      <ItemDetail item={item}/>
   </div>
   )
 }
