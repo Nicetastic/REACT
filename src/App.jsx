@@ -8,7 +8,6 @@ import Cart from './components/Cart/Cart'
 import CartProvider from './context/CartContext'
 
 export const CartContext = React.createContext([])
-console.log("CartContext: ", CartContext)
 
 const App = () => {
   return (
