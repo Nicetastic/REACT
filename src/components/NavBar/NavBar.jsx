@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from "../../assets/img/logoazulsys.png"
-import CartWidget from "../Cartwidget/Cartwidget"
+import Cartwidget from "../Cartwidget/Cartwidget"
 import "./NavBar.css"
 import { NavLink } from 'react-router-dom'
 
@@ -19,7 +19,7 @@ const NavBar = () => {
           <NavLink className="nav-link" to="/category/Comercio">Comercio</NavLink>
         </li>
         <li>
-          <NavLink className="carrito" to="/"><CartWidget /></NavLink>
+          <NavLink className="carrito" to="/"><Cartwidget /></NavLink>
         </li>
       </ul>
     </div>
