@@ -32,7 +32,7 @@ const Productos = [
     title: "Televisión LED",
     price: "$55000",
     category: "Hogar",
-    stock: 3,
+    stock: 0,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam doloribus, eius expedita nemo vitae blanditiis.",
   }];
 
