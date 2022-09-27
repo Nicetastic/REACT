@@ -8,19 +8,19 @@ function Cart() {
 
   if (cart.length === 0) {
     return (
-    <div className="container-xxl d-flex flex-column flex- align-items-center wrap py-4 bg-warning">
+    <div className="container-xxl d-flex flex-column flex- align-items-center wrap py-5 bg-warning bg-gradient">
       <p>El carrito está vacio</p>
-      <Link to="/" >Página principal</Link>
+      <Link to="/">Agregar productos</Link>
     </div>
   )
 }
 
   return (
-    <div>
+    <div className='container-xxl bg-primary bg-gradient'>
       {cart.map((product) => (
         <ItemCart key={product.id} product={product} />
       ))}
-      <p>total: {totalPrice()}</p>
+      <p>Precio total: {totalPrice()}</p>
     </div>
     )
   }

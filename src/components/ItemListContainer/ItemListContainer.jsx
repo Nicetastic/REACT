@@ -24,9 +24,9 @@ const ItemListContainer = ({texto}) => {
   }, [id])
 
   return (
-    <div className='container-xxl mt-4 pl-3'>
-      <div className=' row'>
-      <ItemList item={item} />
+    <div className='container-xxl p-2 bg-primary'>
+      <div className='row'>
+        <ItemList item={item} />
       </div>
     </div>
   )
