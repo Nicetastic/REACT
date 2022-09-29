@@ -1,0 +1,14 @@
+.Producto {
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.Producto img {
+    margin-top: 20px;
+    width: 45%;
+    height: 45%;
+    object-fit: cover;
+}

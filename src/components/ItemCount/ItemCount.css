@@ -1,0 +1,13 @@
+.counter {
+    width: auto;
+    text-align: center;
+}
+
+span {
+    margin: 1rem;
+}
+
+.btn {
+    width: max-content;
+    margin: 0.5em;
+}

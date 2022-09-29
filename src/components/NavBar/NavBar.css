@@ -1,0 +1,32 @@
+.contenedor-menu {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+ul li {
+    padding-right: 15px;    
+    padding-left: 15px;
+    display: flex;
+    align-content: flex-end;
+    align-items: center;
+    list-style: none;
+    font-size: x-large;
+}
+
+.nav-item {
+    --bs-nav-link-color: #41464b !important;
+}
+
+.logoAzul {
+    padding: 10px;
+    padding-left: 0px;
+    height: 150px;
+    width: auto;
+}
+
+.carrito {
+    padding-left: 25px; 
+    padding-right: 25px;
+}
