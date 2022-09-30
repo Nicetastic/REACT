@@ -16,7 +16,7 @@ function Cart() {
 }
 
   return (
-    <div className='container-xxl bg-primary bg-gradient'>
+    <div className='container-xxl pt-3 bg-primary bg-gradient'>
       {cart.map((product) => (
         <ItemCart key={product.id} product={product} />
       ))}
