@@ -2,31 +2,33 @@ import React, {useEffect, useState} from 'react'
 import "./ItemListContainer.css"
 import {useParams} from 'react-router-dom'
 import ItemList from '../ItemList/ItemList'
-import Productos from '../Productos'
+import Loading from "../Loading/Loading"
+import {getFirestore, collection, getDocs, where, query} from "firebase/firestore"
 
-
-const ItemListContainer = ({texto}) => {
+const ItemListContainer = () => {
   const [item,setItem] = useState ([])
   const {id} = useParams ()
+  const [loading,setLoading] = useState (true)
 
   useEffect(() => {
-    const getItem = new Promise(resolve => {
-      setTimeout(() => {
-        resolve(Productos)
-      }, 2000)
-    })
-
+    const db = getFirestore()
+    const response = collection(db, "items")
     if (id) {
-      getItem.then(res => setItem(res.filter(producto => producto.category === id)))
-    } else {
-      getItem.then(res => setItem(res))
-    }
-  }, [id])
+        const queryFilter = query(
+          response,
+          where("category","==", id))
+        getDocs(queryFilter).then((res) =>
+          setItem(res.docs.map((product) => ({ id: product.id, ...product.data() }))))}
+    else {
+      getDocs(response).then((res) =>
+        setItem(res.docs.map((product) => ({ id: product.id, ...product.data() }))))}
+      setLoading(false)
+}, [id])
 
   return (
     <div className='container-xxl p-2 bg-primary'>
       <div className='row'>
-        <ItemList item={item} />
+        {loading ? <Loading /> : <ItemList item={item}/>}
       </div>
     </div>
   )

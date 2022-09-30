@@ -19,7 +19,7 @@ const ItemDetail = ({item}) => {
             <img className='detail__image my-5' src={item.image} alt="" />
             <div className='content my-4 px-4'>
                 <h1>{item.title}</h1>
-                <h4>{item.price}</h4>
+                <h4>${item.price}</h4>
                 <p>{item.desc}</p>
                 {goToCart 
                     ? (<Link to="/cart"><h5>Terminar mi compra</h5></Link>)

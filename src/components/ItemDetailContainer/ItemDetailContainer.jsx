@@ -1,26 +1,26 @@
 import React, {useEffect, useState} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
-import Productos from '../Productos'
+// import Productos from '../Productos'
+import Loading from "../Loading/Loading"
+import {getFirestore, doc, getDoc } from "firebase/firestore"
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState ({}) 
     const {id} = useParams()
+    const [loading,setLoading] = useState (true)
 
-    useEffect(()=> {
-    const getItem = new Promise(resolve => {
-      setTimeout(() => {
-        resolve(Productos)
-      }, 1000)
-    })
-
-    getItem.then(res => setItem(res.find(Producto => Producto.id === parseInt(id))))
-  }, [id])
+    useEffect(() => {
+      const db = getFirestore()
+      const response = doc(db, "items", id)
+      getDoc(response).then((res) => setItem({id: res.id, ...res.data()}))
+      setLoading(false)
+    }, [id])
 
   return (
-  <div className='containerDetail'>
-      <ItemDetail item={item}/>
-  </div>
+    <div className='containerDetail'>
+      {loading ? <Loading /> : <ItemDetail item={item}/>}
+    </div>
   )
 }
 
