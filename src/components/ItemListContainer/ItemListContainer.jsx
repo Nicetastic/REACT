@@ -26,7 +26,7 @@ const ItemListContainer = () => {
 }, [id])
 
   return (
-    <div className='container-xxl p-2 bg-primary'>
+    <div className='container-xxl p-2 bg-info'>
       <div className='row'>
         {loading ? <Loading /> : <ItemList item={item}/>}
       </div>
