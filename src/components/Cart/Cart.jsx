@@ -3,9 +3,10 @@ import {useCartContext} from "../../context/CartContext"
 import {Link}  from "react-router-dom"
 import ItemCart from "../ItemCart/ItemCart"
 import { getFirestore, addDoc, collection } from "firebase/firestore"
+import "./Cart.css"
 
 const Cart = () => {
-  const {cart, totalPrice} = useCartContext()
+  const {cart, totalPrice, clearCart} = useCartContext()
 
   const order = {
     buyer: {
@@ -39,12 +40,13 @@ const handleClick = () => {
 }
 
   return (
-    <div className="container-xxl pt-3 bg-primary bg-gradient">
+    <div className="container-xxl py-2 bg-primary bg-gradient">
       {cart.map((product) => (
         <ItemCart key={product.id} product={product} />
       ))}
       <p>Precio total: ${totalPrice()}</p>
-      <button onClick={handleClick}>Finalizar compra</button>
+      <button onClick={handleClick}>Finalizar compra</button> <br />
+      <button onClick={() => clearCart()} >Vaciar carrito</button>
     </div>
     )
   }
