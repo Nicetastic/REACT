@@ -1,8 +1,7 @@
 .itemCart {
   display: flex;
   border-bottom: 1px solid gray;
-  max-width: max-content;
-  margin: 3px auto;
+  justify-content: center;
 }
 
 .itemCart img {
