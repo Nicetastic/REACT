@@ -22,9 +22,9 @@ const ItemDetail = ({item}) => {
                 <h4>${item.price}</h4>
                 <p>{item.desc}</p>
                 {goToCart ?
-                  <div> 
-                    <button className="btn btn-light"><Link to="/"><h5>Seguir comprando</h5></Link></button>
-                    <button className="btn btn-light"><Link to="/cart"><h5>Ir al carro</h5></Link></button>
+                  <div className="d-flex align-items-center"> 
+                    <Link to="/"><button className="btn btn-light"><h5>Seguir comprando</h5></button></Link>
+                    <Link to="/cart"><button className="btn btn-light"><h5>Ir al carro</h5></button></Link>
                   </div>
                     : (<ItemCount initial={0} stock={item.stock} onAdd={onAdd} />)
                 }

@@ -7,6 +7,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Cart from './components/Cart/Cart'
 import CartProvider from './context/CartContext'
 import Checkout from './components/Checkout/Checkout'
+import Header from './components/Header/Header'
 
 export const CartContext = React.createContext([])
 
@@ -14,6 +15,7 @@ const App = () => {
   return (
     <div className="App">
       <CartProvider>
+        <Header />
         <NavBar />
         <Routes>
           <Route path= "/" element= {<ItemListContainer/>} />
