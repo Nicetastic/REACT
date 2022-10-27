@@ -1,13 +1,13 @@
-import './App.css'
-import React from 'react'
+import "./App.css"
+import React from "react"
 import {Routes, Route} from "react-router-dom"
-import NavBar from './components/NavBar/NavBar'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
-import Cart from './components/Cart/Cart'
-import CartProvider from './context/CartContext'
-import Checkout from './components/Checkout/Checkout'
-import Header from './components/Header/Header'
+import NavBar from "./components/NavBar/NavBar"
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
+import Cart from "./components/Cart/Cart"
+import CartProvider from "./context/CartContext"
+import Checkout from "./components/Checkout/Checkout"
+import Header from "./components/Header/Header"
 
 export const CartContext = React.createContext([])
 
@@ -26,7 +26,7 @@ const App = () => {
         </Routes>
       </CartProvider>
     </div>
-  );
+  )
 }
 
 export default App

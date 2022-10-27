@@ -1,7 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import { BrowserRouter as Router } from 'react-router-dom'
+import React from "react"
+import ReactDOM from "react-dom/client"
+import App from "./App"
+import { BrowserRouter as Router } from "react-router-dom"
 import { initializeApp } from "firebase/app"
 
 const firebaseConfig = {
@@ -11,11 +11,11 @@ const firebaseConfig = {
   storageBucket: "azulsys-react.appspot.com",
   messagingSenderId: "1095194012302",
   appId: "1:1095194012302:web:b9314b7f9d1b74213b37df"
-};
+}
 
 initializeApp(firebaseConfig)
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
   <React.StrictMode>
     <Router>

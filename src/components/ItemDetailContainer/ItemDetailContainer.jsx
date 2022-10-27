@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react'
-import ItemDetail from '../ItemDetail/ItemDetail'
-import { useParams } from 'react-router-dom'
+import React, {useEffect, useState} from "react"
+import ItemDetail from "../ItemDetail/ItemDetail"
+import { useParams } from "react-router-dom"
 import Loading from "../Loading/Loading"
 import {getFirestore, doc, getDoc } from "firebase/firestore"
 
@@ -17,7 +17,7 @@ const ItemDetailContainer = () => {
     }, [id])
 
   return (
-    <div className='containerDetail'>
+    <div className="containerDetail">
       {loading ? <Loading /> : <ItemDetail item={item}/>}
     </div>
   )

@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState} from "react"
 import "./ItemListContainer.css"
-import {useParams} from 'react-router-dom'
-import ItemList from '../ItemList/ItemList'
+import {useParams} from "react-router-dom"
+import ItemList from "../ItemList/ItemList"
 import Loading from "../Loading/Loading"
 import {getFirestore, collection, getDocs, where, query} from "firebase/firestore"
 
@@ -26,8 +26,8 @@ const ItemListContainer = () => {
 }, [id])
 
   return (
-    <div className='container-xxl p-2 bg-info'>
-      <div className='row'>
+    <div className="container-xxl p-2 bg-info">
+      <div className="row">
         {loading ? <Loading /> : <ItemList item={item}/>}
       </div>
     </div>
